@@ -27,6 +27,14 @@
   (ex) `../git_prac` 이건 상대경로
 
 
+<br><br><br>
 
+# Markdown
+
+- 파일명(확장자) `.md`
+- 참고용: [Markdown guide](https://www.markdownguide.org/basic-syntax/)
+
+<br><br><br>
 
 # Git
+
