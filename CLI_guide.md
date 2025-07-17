@@ -7,6 +7,7 @@
 - `mkdir [디렉토리명]` : 디렉토리 생성
 - `ls` : 현재 작업중인 디렉토리의 항목들 나열
 - `cd [디렉토리명]` : 작업 디렉토리 변경
+  
 <br><br>
 
 ### 경로
@@ -26,6 +27,13 @@
 
   (ex) `../git_prac` 이건 상대경로
 
+<br><br>
+
+### Options
+
+<br><br>
+
+### Manual
 
 <br><br><br>
 
@@ -33,13 +41,3 @@
 
 - 파일명(확장자) `.md`
 - 참고용: [Markdown guide](https://www.markdownguide.org/basic-syntax/)
-
-<br><br><br>
-
-# Git
-
-### 3가지 영역
-- working directory (작업중)
-- staging area (중간 준비)
-- repository (저장)
-  
