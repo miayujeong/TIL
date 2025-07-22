@@ -1,1 +1,3 @@
-readme
+- `CLI_guide`: CLI commands, Markdown 사용법 
+- `GIT_guide`: GIT 사용법 
+- `Python_guide`: Python 기초 

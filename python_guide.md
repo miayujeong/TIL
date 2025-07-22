@@ -16,7 +16,7 @@
 
 <br><br>
 
-## Sequence Types -- 문자열
+## 문자열
 
 ### f-string
 
@@ -56,7 +56,29 @@
 
 <br><br>
 
-## Python Style Guide 
+## Collection
+
+- Collection: 여러 개의 값을 하나로 묶어 관리하는 자료형들을 통칭
+- `str`, `list`, `tuple`, `list`, `range`, `set`, `dict` 등
+- 변경 가능 여부, 순서 존재 여부에 따라:
+  | 데이터 타입 | 변경 가능 | 순서 |
+  |---|---|---|
+  | `str` | X | O |
+  | `list` | O | O |
+  | `tuple` | X | O |
+  | `dict` | O | X |
+  | `set` | O | X |
+
+<br><br>
+
+## Other Types
+
+- `None`
+- `Boolean`
+
+<br><br>
+
+## 기타 참고사항 
 
 ### PEP-8: Python 공식 스타일 가이드
 
@@ -68,3 +90,44 @@
   - 한 줄의 길이는 79자로 제한, 길어질 경우 줄바꿈
   - 문자와 밑줄을 사용해 함수, 변수, 속성 이름 작성
   - 함수 정의나 클래스 정의 등의 블록 사이에는 빈 줄 추가
+
+### Trailing Comma 
+```python
+items = [
+    'item1',
+    'item2',
+    'item3',
+]
+```
+- 각 요소를 별도의 줄에 작성하고, 마지막 요소 뒤에 trailing comma (`,`) 추가
+- 닫는 괄호는 다시 새로운 줄에 작성
+- 딕셔너리 표현 시 자주 사용됨
+- Trailing comma 사용의 장점:
+  - 가독성 향상
+  - 유지보수 용이
+  
+### 단축 평가
+
+- Python 논리 연산에서, 두 번째 피연산자를 평가하지 않고 넘어가는 경우가 있음 
+- i.e., `and` 연산 시 첫 번째  피연산자가 `False` 값이라면 굳이 두 번째 피연산자를 확인하지 않아도 됨. 이런 경우 두 번째 피연산자는 평가하지 않음!
+
+```python
+item1 = 'apple'
+item2 = 'banana'
+result = item1 or item2
+
+print(f'final result is: {result}') # result = apple
+```
+```python
+item1 = ''
+item2 = 'apple'
+result = item1 and item2
+
+print(f'final result is: :{result}') # result = ''
+```
+- 연산 결과를 내는 데에 필요할 때까지만 확인하고, 그렇게 마지막으로 확인한 값이 담긴다고 생각
+
+
+- 단축 평가를 하는 이유?
+  - 코드 실행을 최적화하고, 불필요한 연산을 피할 수 있음
+  - 단순 논리 연산을 넘어, 코드의 흐름을 제어하고, 오류를 방지하며, 간결한 코드 작성에 유용하게 사용됨 
